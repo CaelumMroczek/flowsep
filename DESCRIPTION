@@ -1,11 +1,17 @@
 Package: flowsep
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Choose Your Own Hydrograph Separation Adventure
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Authors@R: 
+    person("Caelum", "Mroczek", , "csm428@nau.edu", role = c("aut", "cre"),
+           comment = c(ORCID = "0009-0005-6695-0134"))
+Description: A streamlined process to separate streamflow datasets
+    into base flow and/or quickflow. You provide the data, choose
+    the desired hydrograph separation technique, and get the output dataset.
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+Depends: 
+    R (>= 2.10)
+Imports: dataRetrieval
+RoxygenNote: 7.2.3
