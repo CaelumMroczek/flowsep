@@ -2,7 +2,7 @@
 % Please edit documentation in R/filterLH.R
 \name{filterLH}
 \alias{filterLH}
-\title{Title}
+\title{Lyne-Hollick recursive digital filter}
 \usage{
 filterLH(streamflow, alpha = 0.925, passes = 3)
 }
@@ -17,7 +17,7 @@ filterLH(streamflow, alpha = 0.925, passes = 3)
 a dataframe with 2 columns and nrow = length of streamflow dataset. Column one contains baseflow in the same units as input, column two contains quickflow in the same units as input.
 }
 \description{
-Title
+Lyne-Hollick recursive digital filter
 }
 \examples{
 streamflow <- GreenRiver[,2]

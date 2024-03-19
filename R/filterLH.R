@@ -1,4 +1,4 @@
-#' Title
+#' Lyne-Hollick recursive digital filter
 #'
 #' @param streamflow vector - streamflow values
 #' @param alpha numeric - filter parameter (defaults to 0.925 following Nathan and McMahon (1990))
