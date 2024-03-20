@@ -6,6 +6,7 @@
 #'
 #' @return a dataframe with dates and mean daily discharge data (in cfs)
 #' @export
+#' @importFrom stats quantile
 #'
 #' @examples
 #' gage_no <- "09315000"
