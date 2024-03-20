@@ -14,7 +14,7 @@ filterLH(streamflow, alpha = 0.925, passes = 3)
 \item{passes}{numeric - number of times the filter passes over the data (typically 1-3)}
 }
 \value{
-a dataframe with 2 columns and nrow = length of streamflow dataset. Column one contains baseflow in the same units as input, column two contains quickflow in the same units as input.
+a dataframe with 3 columns and nrow = length of streamflow dataset. Column one contains streamflow in the same units as input, column two contains baseflow in the same units as input, column three contains quickflow in the same units as input.
 }
 \description{
 Lyne-Hollick recursive digital filter

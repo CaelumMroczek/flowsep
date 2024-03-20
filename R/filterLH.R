@@ -4,7 +4,7 @@
 #' @param alpha numeric - filter parameter (defaults to 0.925 following Nathan and McMahon (1990))
 #' @param passes numeric - number of times the filter passes over the data (typically 1-3)
 #'
-#' @return a dataframe with 2 columns and nrow = length of streamflow dataset. Column one contains baseflow in the same units as input, column two contains quickflow in the same units as input.
+#' @return a dataframe with 3 columns and nrow = length of streamflow dataset. Column one contains streamflow in the same units as input, column two contains baseflow in the same units as input, column three contains quickflow in the same units as input.
 #' @export
 #'
 #' @examples
@@ -51,7 +51,7 @@ filterLH <- function(streamflow, alpha = 0.925, passes = 3) {
     }
 
     # Creating a data frame with baseflow and quickflow
-    result <- data.frame(baseflow, quickflow)
+    result <- data.frame(streamflow, baseflow, quickflow)
 
     # Returning the data frame
     return(result)
