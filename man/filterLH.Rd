@@ -20,5 +20,5 @@ a dataframe with 3 columns and nrow = length of streamflow dataset. Column one c
 Lyne-Hollick recursive digital filter
 }
 \examples{
-filterLH(GreenRiver)
+head(filterLH(GreenRiver))
 }

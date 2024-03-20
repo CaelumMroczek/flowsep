@@ -8,7 +8,7 @@
 #' @export
 #'
 #' @examples
-#' filterLH(GreenRiver)
+#' head(filterLH(GreenRiver))
 
 # Function to compute baseflow and quickflow from streamflow data using a digital filtering method.
 filterLH <- function(dataset, alpha = 0.925, passes = 3) {
