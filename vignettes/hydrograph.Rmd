@@ -16,7 +16,7 @@ knitr::opts_chunk$set(
 
 # Building a Hydrograph with flowsep
 
-```{r setup}
+```{r setup, include = FALSE}
 library(flowsep)
 ```
 
@@ -29,12 +29,14 @@ library(flowsep)
     start_date <- "2021-09-30"
     end_date <- "2022-10-01"
     streamgage <- getUSGS(gage_no, start_date, end_date)
+    head(streamgage)
     ```
 
 2.  Conduct base-flow separation using the Lyne-Hollick recursive digital filter (filterLH)
 
     ```{r}
     filtered <- filterLH(streamgage)
+    head(filtered)
     ```
 
 3.  Plot the hydrograph with total flow and base flow (hydrograph)
