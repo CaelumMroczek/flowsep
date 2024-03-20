@@ -4,10 +4,10 @@
 \alias{filterLH}
 \title{Lyne-Hollick recursive digital filter}
 \usage{
-filterLH(streamflow, alpha = 0.925, passes = 3)
+filterLH(dataset, alpha = 0.925, passes = 3)
 }
 \arguments{
-\item{streamflow}{vector - streamflow values}
+\item{dataset}{dataframe - column 1 contains dates, column 2 contains streamflow values}
 
 \item{alpha}{numeric - filter parameter (defaults to 0.925 following Nathan and McMahon (1990))}
 
@@ -20,6 +20,5 @@ a dataframe with 3 columns and nrow = length of streamflow dataset. Column one c
 Lyne-Hollick recursive digital filter
 }
 \examples{
-streamflow <- GreenRiver[,2]
-filterLH(streamflow)
+filterLH(GreenRiver)
 }

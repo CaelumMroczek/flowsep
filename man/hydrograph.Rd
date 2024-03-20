@@ -17,5 +17,6 @@ Plot a Hydrograph
 }
 \examples{
 
-hydrograph(GreenRiver)
+t <- filterLH(GreenRiver)
+hydrograph(t)
 }

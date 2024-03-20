@@ -1,0 +1,44 @@
+---
+title: "hydrograph"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{hydrograph}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# Building a Hydrograph with flowsep
+
+```{r setup}
+library(flowsep)
+```
+
+## Steps
+
+1.  Access USGS streamgage data for desired site (getUSGS)
+
+    ```{r}
+    gage_no <- "09315000"
+    start_date <- "2021-09-30"
+    end_date <- "2022-10-01"
+    streamgage <- getUSGS(gage_no, start_date, end_date)
+    ```
+
+2.  Conduct base-flow separation using the Lyne-Hollick recursive digital filter (filterLH)
+
+    ```{r}
+    filtered <- filterLH(streamgage)
+    ```
+
+3.  Plot the hydrograph with total flow and base flow (hydrograph)
+
+    ```{r}
+    hydrograph(filtered)
+    ```

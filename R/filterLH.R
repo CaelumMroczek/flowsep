@@ -1,6 +1,6 @@
 #' Lyne-Hollick recursive digital filter
 #'
-#' @param streamflow vector - streamflow values
+#' @param dataset dataframe - column 1 contains dates, column 2 contains streamflow values
 #' @param alpha numeric - filter parameter (defaults to 0.925 following Nathan and McMahon (1990))
 #' @param passes numeric - number of times the filter passes over the data (typically 1-3)
 #'
@@ -8,14 +8,15 @@
 #' @export
 #'
 #' @examples
-#' streamflow <- GreenRiver[,2]
-#' filterLH(streamflow)
+#' filterLH(GreenRiver)
 
 # Function to compute baseflow and quickflow from streamflow data using a digital filtering method.
-filterLH <- function(streamflow, alpha = 0.925, passes = 3) {
+filterLH <- function(dataset, alpha = 0.925, passes = 3) {
 
   # Suppressing warnings for cleaner output
   suppressWarnings({
+    streamflow <- dataset[,2] #this is what outputs from getUSGS
+    dates <- dataset[,1]
 
     # Defining start and end values for the filter function
     Ends <- c(1, length(streamflow)) * rep(1, (passes + 1))
@@ -51,7 +52,7 @@ filterLH <- function(streamflow, alpha = 0.925, passes = 3) {
     }
 
     # Creating a data frame with baseflow and quickflow
-    result <- data.frame(streamflow, baseflow, quickflow)
+    result <- data.frame(dates, streamflow, baseflow, quickflow)
 
     # Returning the data frame
     return(result)
