@@ -23,7 +23,7 @@ The goal of flowsep is to provide quick access to various base-flow separation t
 
 These hydrograph separation methods separate total stream discharge into base flow and quick flow. 
 
-![](~/Documents/GitHub/flowsep/man/figures/BF_diagram.svg)
+![trying](~/Documents/GitHub/flowsep/man/figures/BF_diagram.svg)
 
 ## Installation
 
